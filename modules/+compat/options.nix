@@ -13,9 +13,6 @@ let
 
   compatOptions = { lib, config, ... }: {
     options = {
-      assertions = lib.mkOption { type = lib.types.listOf lib.types.attrs; default = [ ]; };
-      warnings = lib.mkOption { type = lib.types.listOf lib.types.str; default = [ ]; };
-
       home = {
         activation = lib.mkOption { type = lib.types.attrsOf lib.types.anything; default = { }; };
         file = lib.mkOption { type = lib.types.attrsOf hmFile; default = { }; };
@@ -27,6 +24,7 @@ let
       };
 
       launchd.agents = lib.mkOption { type = lib.types.attrsOf lib.types.anything; default = { }; };
+      meta = lib.mkOption { type = lib.types.attrsOf lib.types.anything; default = { }; };
       programs.home-manager.enable = lib.mkOption { type = lib.types.bool; default = false; };
 
       systemd.user = {
