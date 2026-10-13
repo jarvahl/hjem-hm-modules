@@ -1,0 +1,6 @@
+.direnv/
+result
+result-*
+*.drv
+.envrc
+.DS_Store
